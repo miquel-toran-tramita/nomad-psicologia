@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--colorText);
 }
 
@@ -23,7 +23,12 @@ a {
   cursor: pointer;
 }
 
-h1,
+h1 {
+  margin: 0;
+  font-size: 31px;
+  font-weight: 700;
+}
+
 h2,
 h3,
 h4,
@@ -43,6 +48,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--colorBackground);
   margin: 0;
+  position: relative;
 }
 
 button {
@@ -56,7 +62,7 @@ button {
   outline: inherit;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   cursor: pointer;
   appearance: none;
   background: none;

@@ -1,7 +1,16 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import Portada from '@/components/Portada.svelte'
+import CercleGroc from '@/components/CercleGroc.svelte'
+import Equip from '@/components/Equip.svelte'
+import Especialitats from '@/components/Especialitats.svelte'
+import Contacte from '@/components/Contacte.svelte'
 ---
 
 <Layout title="Nomad Psicología">
-NOMAD PSICOLOGIA
+    <Portada></Portada>
+    <CercleGroc></CercleGroc>
+    <Equip></Equip>
+    <Especialitats client:load></Especialitats>
+    <Contacte></Contacte>
 </Layout>

@@ -8,43 +8,19 @@
   const items: IMenuItem[] = [
     {
       href: '/',
-      title: 'Element 1',
-      dropdown: [
-        {
-          href: '/',
-          title: 'Sub Element 1',
-        },
-        {
-          href: '/',
-          title: 'Sub Element 2',
-        },
-        {
-          href: '/',
-          title: 'Sub Element 3',
-        },
-      ],
+      title: 'Equip',
     },
     {
       href: '/',
-      title: 'Element 2',
+      title: 'Especialitats',
     },
     {
       href: '/',
-      title: 'Element 3',
-      dropdown: [
-        {
-          href: '/',
-          title: 'Sub Element 1-3',
-        },
-        {
-          href: '/',
-          title: 'Sub Element 2-3',
-        },
-        {
-          href: '/',
-          title: 'Sub Element 3-3',
-        },
-      ],
+      title: 'Contacte',
+    },
+    {
+      href: '/',
+      title: 'Demana Cita',
     },
   ]
 
@@ -52,15 +28,14 @@
 </script>
 
 <style lang="scss">
-  @import '../../../sass/mixins.scss';
-
+  @import 'src/sass/mixins.scss';
   $menuHeight: 80px;
+
   .menu {
-    background-color: var(--colorBackground);
-    border-bottom: 1px solid var(--colorBorder);
+    background-color: rgba(43, 54, 41, 0.5);
     height: $menuHeight;
     z-index: 7;
-
+    
     .g-wrapper {
       display: flex;
       justify-content: space-between;
@@ -84,7 +59,11 @@
           }
 
           .item {
-            color: var(--colorText);
+            color: white;
+
+            &.cita {
+              text-decoration: underline;
+            }
 
             &:hover {
               color: var(--colorBrand);
@@ -155,13 +134,12 @@
   <div class="g-wrapper">
     <a href="/" class="logo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Logo" height="40px" />
-      <span>Pinterest</span>
     </a>
 
     <div class="items">
-      {#each items as item}
+      {#each items as item, i}
         <div class="item-group">
-          <a class="item" href={item.href} title={item.title}>{item.title}</a>
+          <a class="item" href={item.href} title={item.title} class:cita={i == 3}>{item.title}</a>
 
           {#if item.dropdown}
             <div class="dropdown">

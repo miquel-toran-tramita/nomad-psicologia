@@ -11,7 +11,7 @@
   .btn-secondary {
     height: fit-content;
     width: fit-content;
-    padding: 6px 15px;
+    padding: 10px 15px;
     border-radius: 5px;
     transition: 0.3s ease;
   }
@@ -47,10 +47,12 @@
   }
 
   .btn-secondary {
-    border: 1px solid var(--colorBrand);
+    border: 2px solid var(--colorBrand);
 
     :global(span) {
       color: var(--colorBrand);
+      font-weight: bold;
+      transition: 0.3s ease;
     }
 
     &:not([disabled]):hover {
@@ -58,7 +60,8 @@
       background-color: var(--colorBrand);
 
       :global(span) {
-        color: var(--colorBase);
+        color: white;
+        transition: 0.3s ease;
       }
     }
 
