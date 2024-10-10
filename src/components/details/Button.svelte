@@ -10,18 +10,20 @@
   .btn-main,
   .btn-secondary {
     height: fit-content;
-    width: fit-content;
     padding: 10px 15px;
     border-radius: 5px;
     transition: 0.3s ease;
   }
 
   .btn-main {
-    background-color: var(--colorBrand);
-    border: 1px solid var(--colorBrand);
+    width: 100%;
+    background-color: var(--colorBrandSoft);
+    border: 2px solid var(--colorBrandSoft);
 
     :global(span) {
-      color: var(--colorBase);
+      color: white;
+      font-weight: bold;
+      transition: 0.3s ease;
     }
 
     &:not([disabled]):hover {
@@ -29,7 +31,8 @@
       background-color: var(--colorBase);
 
       :global(span) {
-        color: var(--colorBrand);
+        color: var(--colorBrandSoft);
+        transition: 0.3s ease;
       }
     }
 
@@ -48,6 +51,7 @@
 
   .btn-secondary {
     border: 2px solid var(--colorBrand);
+    width: fit-content;
 
     :global(span) {
       color: var(--colorBrand);

@@ -78,6 +78,7 @@
 
 <style lang="scss">
   $errorColor: rgb(138, 18, 18);
+
   .input-wrapper {
     position: relative;
     display: flex;
@@ -110,6 +111,7 @@
     label {
       color: var(--colorText);
       padding-bottom: 5px;
+      font-size: 15px;
     }
 
     input,

@@ -11,7 +11,7 @@
     cursor: pointer;
     position: relative;
     appearance: none;
-    background: transparent;
+    background-color: white;
     margin: 0;
     width: 25px;
     height: 25px;
@@ -20,8 +20,8 @@
     flex-shrink: 0;
 
     &:checked {
-      background-color: var(--colorBrand);
-      border: 1px solid var(--colorBrand);
+      background-color: var(--colorBrandSoft);
+      border: 1px solid var(--colorBrandSoft);
       animation: beat 0.3s ease;
 
       &:after {

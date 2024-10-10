@@ -52,7 +52,7 @@ let people: IPeople[] = [
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 100px;
+        padding: 75px;
         gap: 75px;
 
         .title {

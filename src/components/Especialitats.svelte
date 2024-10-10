@@ -1,7 +1,7 @@
 <script lang="ts">
     import Svg from "./details/Svg.svelte";
 
-    let open = false
+    let openIndex: number = 0
 
     let especialitats = [
         {
@@ -42,6 +42,15 @@
         },
         
     ]
+
+    const openClick = (i: number) => {
+        if(openIndex === i) {
+            openIndex = -1
+            return
+        }
+        
+        openIndex = i
+    }
 </script>
 
 <style lang="scss">
@@ -62,7 +71,6 @@
 
             .especialitat {
                 border-bottom: 1px solid;
-                border-top: 1px solid;
 
                 display: flex;
                 justify-content: space-between;
@@ -85,8 +93,12 @@
                 }
                 
                 &.open {
-                    height: calc-size(fit-content);
+                    height: auto;
                     transition: 0.3s ease;
+                }
+
+                &.top {
+                    border-top: 1px solid;
                 }
             }
         }
@@ -97,8 +109,8 @@
     <h1>Especialitats</h1>
 
     <div class="especialitats">
-        {#each especialitats as especialitat}
-            <button class="especialitat" on:click={() => open = !open} class:open>
+        {#each especialitats as especialitat, i}
+            <button class="especialitat" on:click={() => openClick(i)} class:open={openIndex === i} class:top={i === 0}>
                 <div class="details">
                     <span>{especialitat.title}</span>
                     <p>{especialitat.description}</p>
