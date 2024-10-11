@@ -35,6 +35,8 @@
     background-color: rgba(43, 54, 41, 0.5);
     height: $menuHeight;
     z-index: 7;
+    position: absolute;
+    width: 100%;
     
     .g-wrapper {
       display: flex;
@@ -60,6 +62,7 @@
 
           .item {
             color: white;
+            transition: 0.2s ease;
 
             &.cita {
               text-decoration: underline;
@@ -67,6 +70,7 @@
 
             &:hover {
               color: var(--colorBrand);
+              transition: 0.2s ease;
             }
           }
 
@@ -139,7 +143,7 @@
     <div class="items">
       {#each items as item, i}
         <div class="item-group">
-          <a class="item" href={item.href} title={item.title} class:cita={i == 3}>{item.title}</a>
+          <a class="item" href={item.href} class:cita={i == 3}>{item.title}</a>
 
           {#if item.dropdown}
             <div class="dropdown">

@@ -5,8 +5,10 @@
 </script>
 
 <style lang="scss">
+    @import "src/sass/mixins.scss";
+
     .contact-container {
-        padding: 75px;
+        padding: 75px 50px;
 
         display: flex;
         flex-direction: column;
@@ -58,6 +60,14 @@
                     span {
                         font-weight: bolder;
                     }
+                }
+            }
+
+            @include notDesktop {
+                flex-direction: column;
+
+                .form, .info {
+                    width: 100%;
                 }
             }
         }

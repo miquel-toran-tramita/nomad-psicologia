@@ -6,7 +6,8 @@ interface IPeople {
     name: string,
     title: string,
     num: number,
-    role: string
+    role: string,
+    description: string
 }
 
 let people: IPeople[] = [
@@ -14,45 +15,52 @@ let people: IPeople[] = [
     name: "Maria Rita Ragusa.",
     title: "Psicóloga General Sanitaria.",
     num: 18.177,
-    role: "Cofundadora de Nomad."
+    role: "Cofundadora de Nomad.",
+    description: "La meva professió sempre ha sigut una font d'aprenentatge personal, així mateix, veig la psicoteràpia com la co-creació d'un espai transicional on la persona pugui desenvolupar la seva personalitat. La meva formació ha estat focalitzada en la psicoanàlisis, amb especial atenció en els Trastorns de la Personalitat, tant en adults com en adolescents. Paral·lelament he participat en projectes d'investigació relacionats amb la Teoria de l'aferrament, en grups de supervisió clínica i en seminaris d'estudi dels autors fonamentals de la psicoanàlisi."
     },
 
     {photo: "",
     name: "Maria Rita Ragusa.",
     title: "Psicóloga General Sanitaria.",
     num: 18.177,
-    role: "Cofundadora de Nomad."
+    role: "Cofundadora de Nomad.",
+    description: ""
     },
 
     {photo: "",
     name: "Maria Rita Ragusa.",
     title: "Psicóloga General Sanitaria.",
     num: 18.177,
-    role: "Cofundadora de Nomad."
+    role: "Cofundadora de Nomad.",
+    description: ""
     },
 
     {photo: "",
     name: "Maria Rita Ragusa.",
     title: "Psicóloga General Sanitaria.",
     num: 18.177,
-    role: "Cofundadora de Nomad."
+    role: "Cofundadora de Nomad.",
+    description: ""
     },
 
     {photo: "",
     name: "Maria Rita Ragusa.",
     title: "Psicóloga General Sanitaria.",
     num: 18.177,
-    role: "Cofundadora de Nomad."
+    role: "Cofundadora de Nomad.",
+    description: ""
     },
 ]
 </script>
 
 <style lang="scss">
+    @import "src/sass/mixins.scss";
+
     .equip-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 75px;
+        padding: 75px 50px 50px;
         gap: 75px;
 
         .title {
@@ -65,7 +73,8 @@ let people: IPeople[] = [
             width: 100%;
 
             h1 {
-                width: 600px;
+                max-width: 600px;
+                width: 100%;
             }
         }
 
@@ -74,7 +83,19 @@ let people: IPeople[] = [
             grid-template-columns: repeat(4, 1fr);
             gap: 75px;
 
-            
+            .info {
+                display: flex;
+                flex-direction: column;
+                font-size: 13px;
+
+                .name {
+                    font-weight: bolder;
+                }
+            }
+
+            @include notDesktop {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
     }
 </style>
@@ -89,12 +110,12 @@ let people: IPeople[] = [
 
     <div class="cards">
         {#each people as person}
-            <Card photo={person.photo}>
+            <Card photo={person.photo} more={person.description}>
                 <div class="info">
-                    <div class="name">{person.name}</div>
-                    <div class="title">{person.title}</div>
-                    <div class="num">Col·legiada {person.num}.</div>
-                    <div class="role">{person.role}</div>
+                    <span class="name">{person.name}</span>
+                    <span>{person.title}</span>
+                    <span>Col·legiada {person.num}.</span>
+                    <span>{person.role}</span>
                 </div>
             </Card>
         {/each}

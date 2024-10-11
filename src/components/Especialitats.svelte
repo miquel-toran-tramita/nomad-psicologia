@@ -55,7 +55,7 @@
 
 <style lang="scss">
     .especialitats-container {
-        padding: 75px;
+        padding: 75px 50px;
         background-color: var(--colorBrandSofter);
         display: flex;
         flex-direction: column;

@@ -8,7 +8,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 75px;
+        padding: 75px 50px;
         gap: 50px;
         background-color: var(--colorBrandSofter);
 
