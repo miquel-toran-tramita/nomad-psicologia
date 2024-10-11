@@ -36,10 +36,10 @@
   $menuHeight: 80px;
 
   .menu {
-    background-color: rgba(43, 54, 41, 0.5);
+    background-color: rgba(43, 54, 41, 0.8);
     height: $menuHeight;
     z-index: 7;
-    position: absolute;
+    position: fixed;
     width: 100%;
 
     .g-wrapper {
