@@ -62,6 +62,8 @@
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
+
   .especialitats-container {
     padding: 75px 50px;
     background-color: var(--colorBrandSofter);
@@ -86,6 +88,12 @@
         height: 90px;
         overflow: hidden;
         transition: 0.3s ease;
+
+        @include notDesktop {
+          padding-top: 15px;
+          padding-bottom: 15px;
+          height: 100px;
+        }
 
         .details {
           max-width: 750px;

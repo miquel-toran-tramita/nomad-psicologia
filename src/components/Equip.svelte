@@ -131,7 +131,7 @@
 </style>
 
 <div class="equip-container">
-  <div class="title">
+  <div class="title g-wrapper">
     <h1>Transformem la psicologia perquè puguis transformar la teva vida.</h1>
     <p>
       La diversitat del nostre equip multidisciplinari és la nostra major fortalesa. Junts, treballem en sinergia per oferir-te el suport

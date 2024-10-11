@@ -27,6 +27,12 @@
   ]
 
   let open: boolean = false
+
+  const openMenu = () => {
+    open = !open
+
+    document.body.style.overflow = open ? 'hidden' : 'auto'
+  }
 </script>
 
 <style lang="scss">
@@ -102,18 +108,35 @@
         }
 
         .items-mobile {
-          display: none;
-          position: absolute;
-          flex-direction: column;
-          width: 100%;
-          padding: 20px;
-          height: calc(100dvh - $menuHeight);
+          position: fixed;
           top: 0px;
           left: 0;
-          background-color: var(--colorBase);
+
+          width: 100%;
+          height: 100dvh;
+
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          padding: 75px;
+          color: white;
+          font-size: 20px;
+
+          background-color: rgba(43, 54, 41, 0.9);
+          backdrop-filter: blur(5px);
 
           &.open {
             display: flex;
+          }
+
+          :global(.close) {
+            transform: rotate(45deg);
+            position: absolute;
+
+            top: 20px;
+            right: 40px;
           }
 
           .item,
@@ -158,13 +181,17 @@
       {/each}
     </div>
 
-    <button class="burger" on:click={() => (open = !open)}>
-      <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" fill="var(--colorText)" viewBox="0 -960 960 960"
+    <button class="burger" on:click={openMenu}>
+      <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" fill="white" viewBox="0 -960 960 960"
         ><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg
       >
     </button>
 
     <div class="items-mobile" class:open>
+      <button on:click={openMenu}>
+        <Svg name="plus" height="40" width="40" fill="white" className="close" />
+      </button>
+
       {#each items as item}
         <a class="item" href={item.href} title={item.title}>{item.title}</a>
 
