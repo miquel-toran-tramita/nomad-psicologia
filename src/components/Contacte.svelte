@@ -25,7 +25,7 @@
 
           input,
           textarea {
-            min-height: 50px;
+            min-height: 25px;
             border: 1px solid #bebebe;
             border-radius: 5px;
             padding: 10px;
@@ -62,7 +62,7 @@
 
       .info {
         width: 500px;
-        padding-top: 50px;
+        padding-top: 40px;
 
         display: flex;
         flex-direction: column;

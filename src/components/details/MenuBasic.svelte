@@ -18,10 +18,6 @@
     },
     {
       href: '/',
-      title: 'Contacte',
-    },
-    {
-      href: '/',
       title: 'Demana Cita',
     },
   ]
@@ -168,7 +164,7 @@
     <div class="items">
       {#each items as item, i}
         <div class="item-group">
-          <a class="item" href="#section{i}" class:cita={i == 3}>{item.title}</a>
+          <a class="item" href="#section{i}" class:cita={i === 2}>{item.title}</a>
 
           {#if item.dropdown}
             <div class="dropdown">
