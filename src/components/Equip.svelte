@@ -1,11 +1,12 @@
 <script lang="ts">
   import Card from './details/Card.svelte'
+  export let id
 
   interface IMember {
     photo: string
     name: string
     title: string
-    num: number
+    num: string
     role: string
     description: string
   }
@@ -15,7 +16,7 @@
       photo: 'Maria-Rita',
       name: 'Maria Rita Ragusa.',
       title: 'Psicóloga General Sanitaria.',
-      num: 18.177,
+      num: '18.177',
       role: 'Cofundadora de Nomad.',
       description:
         "La meva professió sempre ha sigut una font d'aprenentatge personal, així mateix, veig la psicoteràpia com la co-creació d'un espai transicional on la persona pugui desenvolupar la seva personalitat. La meva formació ha estat focalitzada en la psicoanàlisis, amb especial atenció en els Trastorns de la Personalitat, tant en adults com en adolescents. Paral·lelament he participat en projectes d'investigació relacionats amb la Teoria de l'aferrament, en grups de supervisió clínica i en seminaris d'estudi dels autors fonamentals de la psicoanàlisi.",
@@ -23,62 +24,69 @@
 
     {
       photo: 'Diego',
-      name: 'Maria Rita Ragusa.',
-      title: 'Psicóloga General Sanitaria.',
-      num: 18.177,
-      role: 'Cofundadora de Nomad.',
-      description: '',
+      name: 'Diego Piñero Leciñena.',
+      title: 'Psicòleg General Sanitari.',
+      num: '20.005',
+      role: 'Cofundador de Nomad.',
+      description:
+        'La trobada amb diferents professionals ha constituït l’eix fonamental en la meva construcció com a professional, realitzant diverses formacions en psicoteràpia psicoanalítica amb nens, adolescents i adults especialitzant-me en psicodiagnòstic amb tècniques projectives gràfiques i assetjament escolar La meva experiència professional com a psicòleg s’ha centrat en l’àmbit clínic amb nens, adolescents i adults i en l’àmbit educatiu en diferents escoles i he coordinat diferents equips professionals. Realitzo supervisions a professionals de diferents àmbits i soc co-fundador de Nomad Psicologia.',
     },
 
     {
       photo: 'Adria',
-      name: 'Maria Rita Ragusa.',
-      title: 'Psicóloga General Sanitaria.',
-      num: 18.177,
-      role: 'Cofundadora de Nomad.',
-      description: '',
+      name: 'Adrià Puente Sabater.',
+      title: 'Psicòleg i terapeuta familiar i de parella.',
+      num: '22.571',
+      role: 'Cofundador de Nomad.',
+      description:
+        'La meva formació com a psicoterapeuta engloba el constructivisme i la teràpia familiar sistèmica (Escola de Teràpia Familiar de Sant Pau). Des d’aquests models he desenvolupat una mirada capacitadora cap a les persones i treballo per potenciar-la. Penso que construint i enfortint els vincles més significatius de la vida podem trobar els recursos necessaris pel canvi. Des de fa anys treballo en diferents camps, com les addiccions i les dependències, i famílies que pateixen situacions de vulnerabilitat.',
     },
 
     {
       photo: 'Loida',
-      name: 'Maria Rita Ragusa.',
-      title: 'Psicóloga General Sanitaria.',
-      num: 18.177,
-      role: 'Cofundadora de Nomad.',
-      description: '',
+      name: 'Loida Silvestre Celada.',
+      title: 'Logopeda.',
+      num: '08-3329',
+      role: '',
+      description:
+        'Diplomada en logopèdia al 2005 per La universitat Ramón Llull, centrant la meva formació en la logopèdia escolar per atendre les demandes infanto-juvenils. Especialitzada en la feminització de la veu per a persones trans. La meva trajectòria professional s’ha basat principalment en centres privats multidisciplinars encara que des de fa uns anys combino aquesta feina amb la intervenció directa a escoles de Badalona i Sant Adrià del Besòs i col·laborant dins del projecte de Proinfància de la Fundació la Caixa.',
     },
 
     {
       photo: 'Marta',
-      name: 'Maria Rita Ragusa.',
+      name: 'Marta Febrer Vilaseca.',
       title: 'Psicóloga General Sanitaria.',
-      num: 18.177,
-      role: 'Cofundadora de Nomad.',
-      description: '',
+      num: '23.347',
+      role: '',
+      description:
+        'La meva formació s’ha basat principalment en la psicologia clínica amb infants i adolescents realitzant un màster i un postgrau a l’Escola de Clínica Psicoanalítica amb Nens i Adolescents (ECPNA), en la intervenció familiar sistèmica realitzant un postgrau al Centre Kine i m’he format en intervenció psicosocial en violència masclista i familiar a l’Associació Conexus. Professionalment he treballat en  infància i l’ adolescència i l’acompanyament dels adults de referència.',
     },
     {
       photo: 'Irene',
-      name: 'Maria Rita Ragusa.',
+      name: 'Irene Garcia Bergé.',
       title: 'Psicóloga General Sanitaria.',
-      num: 18.177,
-      role: 'Cofundadora de Nomad.',
-      description: '',
+      num: '11.403',
+      role: '',
+      description:
+        'La meva formació l’he cursada d’acord amb el meu recorregut professional dins de diferents àmbits en del camp de la psicologia. Específicament en l’àmbit clínic i terapèutic, m’he especialitzat en una vessant psicoanalítica i, actualment, estic immersa en profunditzar en l’etapa de la infància i l’adolescència formant-me en diferents escoles com ara a l’Escola de Clínica Psicoanalítica amb Nens i Adolescents (ECPNA). També he participat en sessions clíniques i sessions de supervisió psicològica.',
     },
     {
       photo: 'Lorena',
-      name: 'Maria Rita Ragusa.',
+      name: 'Lorena Santana Rodríguez.',
       title: 'Psicóloga General Sanitaria.',
-      num: 18.177,
-      role: 'Cofundadora de Nomad.',
-      description: '',
+      num: '27.572',
+      role: '',
+      description:
+        'Graduada en Psicologia, amb menció en Psicologia de la Salut, per la Universitat Oberta de Catalunya, ampliant els meus coneixements amb l’especialització en Teràpia Sistèmica Breu i amb la formació específica en trauma, vincle i dependència emocional. Desenvolupo la meva activitat com a terapeuta i formadora en l’Àrea de Feminismes i LGTBIQ+ de l’Ajuntament de Barcelona, on acompanyo a dones CIS i trans, víctimes de l’explotació sexual i formes de violència de gènere dintre del col·lectiu LGTBIQ+.',
     },
     {
       photo: 'Alex',
-      name: 'Maria Rita Ragusa.',
-      title: 'Psicóloga General Sanitaria.',
-      num: 18.177,
-      role: 'Cofundadora de Nomad.',
-      description: '',
+      name: 'Alex Puig Folcrà.',
+      title: 'Psicòleg i educador social.',
+      num: ' 26.401',
+      role: '',
+      description:
+        'M’he format dins el camp de la psicologia relacional i constructivista realitzant el Màster en Teràpia Cognitivo-social de la Universitat de Barcelona i  en  el camp de la psicoteràpia sistèmica, ja que considero que  aquestes orientacions em proporcionen eines per poder intervenir de forma integral tant a nivell individual com familiar i grupal.',
     },
   ]
 </script>
@@ -90,7 +98,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0;
+    padding: 75px 0;
     gap: 75px;
 
     .title {
@@ -130,7 +138,7 @@
   }
 </style>
 
-<div class="equip-container">
+<section class="equip-container" {id}>
   <div class="title g-wrapper">
     <h1>Transformem la psicologia perquè puguis transformar la teva vida.</h1>
     <p>
@@ -151,4 +159,4 @@
       </Card>
     {/each}
   </div>
-</div>
+</section>

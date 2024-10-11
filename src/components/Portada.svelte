@@ -1,5 +1,6 @@
 <script lang="ts">
   import Svg from './details/Svg.svelte'
+  export let id
 </script>
 
 <style lang="scss">

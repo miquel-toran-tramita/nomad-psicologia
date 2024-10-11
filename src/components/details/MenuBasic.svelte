@@ -18,10 +18,6 @@
     },
     {
       href: '/',
-      title: 'Contacte',
-    },
-    {
-      href: '/',
       title: 'Demana Cita',
     },
   ]
@@ -77,7 +73,7 @@
             }
 
             &:hover {
-              color: var(--colorBrand);
+              color: var(--colorBrandSoft);
               transition: 0.2s ease;
             }
           }
@@ -168,7 +164,7 @@
     <div class="items">
       {#each items as item, i}
         <div class="item-group">
-          <a class="item" href={item.href} class:cita={i == 3}>{item.title}</a>
+          <a class="item" href="#section{i}" class:cita={i === 2}>{item.title}</a>
 
           {#if item.dropdown}
             <div class="dropdown">
@@ -192,8 +188,8 @@
         <Svg name="plus" height="40" width="40" fill="white" className="close" />
       </button>
 
-      {#each items as item}
-        <a class="item" href={item.href} title={item.title}>{item.title}</a>
+      {#each items as item, i}
+        <a class="item" href="#section{i}" title={item.title} on:click={openMenu}>{item.title}</a>
 
         {#if item.dropdown}
           {#each item.dropdown as subItem}

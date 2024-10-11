@@ -1,7 +1,7 @@
 <script lang="ts">
   import Svg from '@/components/details/Svg.svelte'
 
-  let sended: boolean = false
+  export let id
 </script>
 
 <style lang="scss">
@@ -13,7 +13,7 @@
 
     .content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 80px;
 
       .form {
@@ -25,7 +25,7 @@
 
           input,
           textarea {
-            min-height: 50px;
+            min-height: 25px;
             border: 1px solid #bebebe;
             border-radius: 5px;
             padding: 10px;
@@ -37,10 +37,15 @@
             height: 100px;
             resize: vertical;
           }
+
           &.radio {
             padding-top: 20px;
             padding-bottom: 30px;
             flex-direction: row;
+
+            a:hover {
+              color: var(--colorBrandSoft);
+            }
 
             input {
               width: 25px;
@@ -50,13 +55,14 @@
             }
 
             align-items: center;
+            font-size: 13px;
           }
         }
       }
 
       .info {
         width: 500px;
-        padding-top: 50px;
+        padding-top: 40px;
 
         display: flex;
         flex-direction: column;
@@ -88,7 +94,7 @@
   }
 </style>
 
-<div class="contact-container g-wrapper">
+<section class="contact-container g-wrapper" {id}>
   <h2 class="g-title">Contacte</h2>
   <div class="content">
     <form class="form" action="https://api.web3forms.com/submit" method="POST">
@@ -126,7 +132,7 @@
 
       <input type="hidden" name="redirect" value="http://localhost:4000/" />
 
-      <button type="submit" class="g-btn" on:click={() => (sended = true)}>ENVIAR</button>
+      <button type="submit" class="g-btn">ENVIAR</button>
     </form>
 
     <div class="info">
@@ -149,4 +155,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>
