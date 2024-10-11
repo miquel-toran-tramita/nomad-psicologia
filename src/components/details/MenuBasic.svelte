@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Svg from './Svg.svelte'
+
   interface IMenuItem {
     href: string
     title: string
@@ -37,7 +39,7 @@
     z-index: 7;
     position: absolute;
     width: 100%;
-    
+
     .g-wrapper {
       display: flex;
       justify-content: space-between;
@@ -137,7 +139,7 @@
 <div class="menu">
   <div class="g-wrapper">
     <a href="/" class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Logo" height="40px" />
+      <Svg name="logo" width="100" height="100" />
     </a>
 
     <div class="items">

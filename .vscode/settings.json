@@ -1,0 +1,13 @@
+{
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#0066ff3a",
+    "statusBar.foreground": "#961de7"
+  },
+  "editor.formatOnSave": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  }
+}
