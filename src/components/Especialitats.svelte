@@ -1,5 +1,6 @@
 <script lang="ts">
   import Svg from './details/Svg.svelte'
+  export let id
 
   let openIndex: number = 0
 
@@ -65,19 +66,23 @@
   @import 'src/sass/mixins.scss';
 
   .especialitats-container {
-    padding: 75px 50px;
+    padding: 75px 0;
     background-color: var(--colorBrandSofter);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 60px;
 
-    -webkit-interpolate-size: allow-keywords;
-
     .especialitats {
       display: flex;
       flex-direction: column;
       width: 100%;
+
+      @include notDesktop {
+        :global(svg) {
+          display: none;
+        }
+      }
 
       .especialitat {
         border-bottom: 1px solid;
@@ -85,15 +90,8 @@
         display: flex;
         justify-content: space-between;
         padding: 35px 0;
-        height: 90px;
         overflow: hidden;
         transition: 0.3s ease;
-
-        @include notDesktop {
-          padding-top: 15px;
-          padding-bottom: 15px;
-          height: 100px;
-        }
 
         .details {
           max-width: 750px;
@@ -106,11 +104,19 @@
             font-size: 20px;
             font-weight: bold;
           }
+
+          p {
+            display: none;
+          }
         }
 
         &.open {
           height: auto;
           transition: 0.3s ease;
+
+          p {
+            display: block;
+          }
         }
 
         &.top {
@@ -121,7 +127,7 @@
   }
 </style>
 
-<div class="especialitats-container">
+<section class="especialitats-container" {id}>
   <h1>Especialitats</h1>
 
   <div class="especialitats g-wrapper">
@@ -136,4 +142,4 @@
       </button>
     {/each}
   </div>
-</div>
+</section>

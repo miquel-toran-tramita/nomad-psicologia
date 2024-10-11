@@ -1,5 +1,6 @@
 <script lang="ts">
   import Svg from '@/components/details/Svg.svelte'
+  export let id
 </script>
 
 <style lang="scss">
@@ -74,7 +75,7 @@
   }
 </style>
 
-<div class="contact-container g-wrapper">
+<section class="contact-container g-wrapper" {id}>
   <h2 class="g-title">Contacte</h2>
   <div class="content">
     <form class="form" action="https://api.web3forms.com/submit" method="POST">
@@ -136,4 +137,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>

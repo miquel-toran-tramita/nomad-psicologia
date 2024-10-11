@@ -1,6 +1,6 @@
 <script lang="ts">
   import Button from './details/Button.svelte'
-  import Svg from './details/Svg.svelte'
+  export let id
 </script>
 
 <style lang="scss">
@@ -61,7 +61,7 @@
   }
 </style>
 
-<div class="cercle-content">
+<section class="cercle-content" {id}>
   <div class="content">
     <div class="text">
       <h1>A NOMAD PSICOLOGIA creiem en una psicologia més enllà dels límits tradicionals.</h1>
@@ -80,4 +80,4 @@
     <span>DEMANA CITA</span>
   </Button>
   <!--<Svg name="arrow2"/>-->
-</div>
+</section>
