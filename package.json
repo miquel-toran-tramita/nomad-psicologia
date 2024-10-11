@@ -16,6 +16,7 @@
     "astro-robots": "^2.0.1",
     "chart.js": "^4.4.4",
     "leaflet": "^1.9.4",
+    "sib-api-v3-sdk": "^8.5.0",
     "svelte": "^4.2.19"
   },
   "devDependencies": {

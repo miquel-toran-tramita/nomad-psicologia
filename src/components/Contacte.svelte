@@ -1,56 +1,55 @@
 <script lang="ts">
-  import Input from './details/Input.svelte'
-  import Checkbox from './details/Checkbox.svelte'
-  import Button from './details/Button.svelte'
+  import Svg from '@/components/details/Svg.svelte'
 </script>
 
 <style lang="scss">
   @import 'src/sass/mixins.scss';
 
   .contact-container {
-    padding: 75px 50px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
+    padding: 50px 0;
 
     .content {
-      display: flex;
-      justify-content: space-between;
-      gap: 75px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 80px;
 
       .form {
-        width: 500px;
-
-        .checkbox {
+        .input-group {
+          padding-top: 30px;
           display: flex;
-          align-items: center;
+          flex-direction: column;
           gap: 10px;
-          padding-bottom: 20px;
 
-          span {
-            font-size: 13px;
-
-            a:hover {
-              color: var(--colorBrandSoft);
+          input,
+          textarea {
+            min-height: 50px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+          }
+          &.radio {
+            padding-top: 0;
+            flex-direction: row;
+            input {
+              width: 25px;
+              height: 25px;
+              border: 1px solid lightgray !important;
             }
+
+            align-items: center;
           }
         }
       }
 
       .info {
         width: 500px;
+        padding-top: 50px;
 
         display: flex;
         flex-direction: column;
         gap: 25px;
 
-        .logo {
-          height: 75px;
-          width: 200px;
-          border: 1px solid;
-          margin-bottom: 15px;
+        :global(path) {
+          fill: #191919;
         }
 
         .info-text {
@@ -75,25 +74,50 @@
   }
 </style>
 
-<div class="contact-container">
-  <h1>Contacte</h1>
+<div class="contact-container g-wrapper">
+  <h2 class="g-title">Contacte</h2>
   <div class="content">
-    <div class="form">
-      <Input id="1" label="Nom" />
-      <Input id="2" label="Mail" type="email" />
-      <Input id="3" label="Teléfon" type="tel" />
-      <Input id="4" label="Deixa el teu comentari." type="textarea" />
+    <form class="form" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Replace with your Access Key -->
+      <input type="hidden" name="access_key" value="8ea05408-206c-4f8d-aeca-059327af5113" />
 
-      <div class="checkbox">
-        <Checkbox />
-        <span>He llegit i acepto la <a href="/">Politica de Privacitat</a></span>
+      <!-- Form Inputs. Each input must have a name="" attribute -->
+      <div class="input-group">
+        <label for="">Nom</label>
+        <input type="text" name="Nom" required />
       </div>
 
-      <Button><span>ENVIAR</span></Button>
-    </div>
+      <div class="input-group">
+        <label for="">Email</label>
+        <input type="text" name="Telèfon" required />
+      </div>
+
+      <div class="input-group">
+        <label for="">Telèfon</label>
+        <input type="email" name="Email" required />
+      </div>
+
+      <div class="input-group">
+        <label for="">Deixa el teu comentario</label>
+        <textarea name="Missatge" required></textarea>
+      </div>
+
+      <div class="input-group radio">
+        <input type="radio" />
+        <label for="">He llegit i acepto la <a href="/politica-de-privacitat">Política de privacitat</a></label>
+      </div>
+
+      <!-- Honeypot Spam Protection -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+      <!-- Custom Confirmation / Success Page -->
+      <input type="hidden" name="redirect" value="/gracies" />
+
+      <button type="submit" class="g-btn">ENVIAR</button>
+    </form>
 
     <div class="info">
-      <div class="logo"></div>
+      <Svg name="logo2" width="150" height="80" />
 
       <div class="info-text"><span>Direcció:</span> Carrer de l'Átlantida, 21, planta 2 08230 Sant Adrià del Besòs.</div>
 
