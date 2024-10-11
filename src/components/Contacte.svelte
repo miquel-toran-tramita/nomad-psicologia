@@ -1,5 +1,6 @@
 <script lang="ts">
   import Svg from '@/components/details/Svg.svelte'
+
   export let id
 </script>
 
@@ -12,7 +13,7 @@
 
     .content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 80px;
 
       .form {
@@ -36,10 +37,15 @@
             height: 100px;
             resize: vertical;
           }
+
           &.radio {
             padding-top: 20px;
             padding-bottom: 30px;
             flex-direction: row;
+
+            a:hover {
+              color: var(--colorBrandSoft);
+            }
 
             input {
               width: 25px;
@@ -49,6 +55,7 @@
             }
 
             align-items: center;
+            font-size: 13px;
           }
         }
       }
@@ -125,7 +132,7 @@
 
       <input type="hidden" name="redirect" value="http://localhost:4000/" />
 
-      <button type="submit" class="g-btn" on:click={() => (sended = true)}>ENVIAR</button>
+      <button type="submit" class="g-btn">ENVIAR</button>
     </form>
 
     <div class="info">

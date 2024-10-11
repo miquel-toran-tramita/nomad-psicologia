@@ -98,7 +98,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0;
+    padding: 75px 0;
     gap: 75px;
 
     .title {

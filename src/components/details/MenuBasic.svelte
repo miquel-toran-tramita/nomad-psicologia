@@ -77,7 +77,7 @@
             }
 
             &:hover {
-              color: var(--colorBrand);
+              color: var(--colorBrandSoft);
               transition: 0.2s ease;
             }
           }
