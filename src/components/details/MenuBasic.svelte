@@ -33,7 +33,7 @@
 
 <style lang="scss">
   @import 'src/sass/mixins.scss';
-  $menuHeight: 80px;
+  $menuHeight: 60px;
 
   .menu {
     background-color: rgba(43, 54, 41, 0.8);
@@ -47,6 +47,7 @@
       justify-content: space-between;
       align-items: center;
       height: 100%;
+      overflow: hidden;
 
       .logo {
         display: flex;

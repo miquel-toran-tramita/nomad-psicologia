@@ -3,10 +3,12 @@
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
+
   .portada-content {
     position: relative;
     width: 100%;
-    height: 70dvh;
+    height: 75dvh;
     background-color: var(--colorBrand);
     overflow: hidden;
 
@@ -29,11 +31,17 @@
       width: 95%;
       top: -20%;
       z-index: 0;
+
+      @include notDesktop {
+        width: 200%;
+        top: 15px;
+        left: -25%;
+      }
     }
 
     .coneixens {
       position: absolute;
-      bottom: 20px;
+      bottom: 50px;
       right: 0;
       left: 0;
       margin: 0 auto;
