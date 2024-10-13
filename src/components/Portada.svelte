@@ -8,7 +8,7 @@
   .portada-content {
     position: relative;
     width: 100%;
-    height: 75dvh;
+    height: 75vh;
     background-color: var(--colorBrand);
     overflow: hidden;
 
