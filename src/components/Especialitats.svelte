@@ -4,7 +4,7 @@
 
   let openIndex: number = 0
 
-  let especialitats = [
+  const especialitats = [
     {
       title: 'Psicoteràpia individual per nens, adolescents i adults',
       description:
