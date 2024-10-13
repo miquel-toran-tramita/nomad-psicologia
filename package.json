@@ -3,8 +3,8 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node scripts/readUrls && astro sync && astro dev",
-    "build": "node scripts/hidePrivate && astro build && node scripts/addPrivate",
+    "dev": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
     "update": "ncu -u && npm install"
   },
