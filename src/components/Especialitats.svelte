@@ -107,6 +107,11 @@
 
           p {
             display: none;
+            opacity: 0;
+            translate: 0 -25px;
+            transition-property: display opacity;
+            transition-duration: 0.3s;
+            transition-behavior: allow-discrete;
           }
         }
 
@@ -116,6 +121,13 @@
 
           p {
             display: block;
+            opacity: 1;
+            translate: 0 0;
+
+            @starting-style {
+              opacity: 0;
+              translate: 0 -25px;
+            }
           }
         }
 

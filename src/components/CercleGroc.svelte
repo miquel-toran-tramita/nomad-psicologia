@@ -1,5 +1,6 @@
 <script lang="ts">
   import Button from './details/Button.svelte'
+  import Svg from './details/Svg.svelte'
   export let id
 </script>
 
@@ -79,5 +80,5 @@
   <Button type="secondary">
     <span>DEMANA CITA</span>
   </Button>
-  <!--<Svg name="arrow2"/>-->
+  <Svg name="" />
 </section>
