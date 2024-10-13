@@ -4,6 +4,7 @@ import robots from 'astro-robots'
 import sitemap from '@astrojs/sitemap'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
+import vercel from '@astrojs/vercel/serverless';
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
@@ -11,10 +12,14 @@ const __dirname = dirname(__filename)
 export default defineConfig({
   site: 'https://www.nomadpsicologia.com',
   integrations: [svelte(), sitemap(), robots()],
-  output: 'static', // or 'hybrid'
+
+  // or 'hybrid'
+  output: 'static',
+
   server: {
     port: 4000,
   },
+
   vite: {
     resolve: {
       alias: {
@@ -22,4 +27,6 @@ export default defineConfig({
       },
     },
   },
+
+  adapter: vercel(),
 })
