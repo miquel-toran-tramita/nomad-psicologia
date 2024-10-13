@@ -1,6 +1,5 @@
 <script lang="ts">
   import Svg from './details/Svg.svelte'
-  export let id
 </script>
 
 <style lang="scss">
@@ -62,6 +61,6 @@
   <img class="linea" src="/assets/linea.svg" alt="linea" />
   <div class="coneixens">
     <span>Coneixe'ns</span>
-    <Svg name="arrow2" fill="white" />
+    <Svg name="" fill="white" />
   </div>
 </div>
