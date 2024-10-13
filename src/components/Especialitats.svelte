@@ -100,35 +100,34 @@
           flex-direction: column;
           gap: 30px;
 
-          span {
+          .title {
             font-size: 20px;
             font-weight: bold;
           }
 
-          p {
+          .description {
             display: none;
-            opacity: 0;
-            translate: 0 -25px;
-            transition-property: display opacity;
-            transition-duration: 0.3s;
-            transition-behavior: allow-discrete;
           }
         }
 
         &.open {
-          height: auto;
-          transition: 0.3s ease;
+          height: calc-size(auto);
 
-          p {
+          .description {
             display: block;
-            opacity: 1;
-            translate: 0 0;
-
-            @starting-style {
-              opacity: 0;
-              translate: 0 -25px;
-            }
           }
+
+          :global(.svg-plus) {
+            display: none;
+          }
+
+          :global(.svg-minus) {
+            display: block;
+          }
+        }
+
+        :global(.svg-minus) {
+          display: none;
         }
 
         &.top {
@@ -146,11 +145,12 @@
     {#each especialitats as especialitat, i}
       <button class="especialitat" on:click={() => openClick(i)} class:open={openIndex === i} class:top={i === 0}>
         <div class="details">
-          <span>{especialitat.title}</span>
-          <p>{especialitat.description}</p>
+          <span class="title">{especialitat.title}</span>
+          <p class="description">{especialitat.description}</p>
         </div>
 
-        <Svg name="plus" />
+        <Svg name="plus" className="svg-plus" />
+        <Svg name="minus" className="svg-minus" />
       </button>
     {/each}
   </div>
