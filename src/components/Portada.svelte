@@ -15,7 +15,7 @@
     .logo {
       position: absolute;
       top: 15%;
-      left: 0;
+      left: -16px;
       right: 0;
       margin: auto;
       height: 70%;
@@ -41,7 +41,7 @@
 
     .coneixens {
       position: absolute;
-      bottom: 50px;
+      bottom: 10px;
       right: 0;
       left: 0;
       margin: 0 auto;
@@ -57,8 +57,8 @@
         font-size: 13px;
       }
 
-      :global(svg) {
-        transform: rotate(-90deg);
+      img {
+        height: 40px;
       }
     }
   }
@@ -69,6 +69,6 @@
   <img class="linea" src="/assets/linea.svg" alt="linea" />
   <div class="coneixens">
     <span>Coneixe'ns</span>
-    <Svg name="" fill="white" />
+    <img class="arrow" src="/assets/arrow-white.svg" alt="arrrow" />
   </div>
 </div>

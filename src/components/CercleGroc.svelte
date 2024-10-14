@@ -8,6 +8,7 @@
   @import '/src/sass/mixins.scss';
 
   .cercle-content {
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -59,6 +60,12 @@
         background-color: #ffbb00;
       }
     }
+
+    .arrow {
+      position: absolute;
+      height: 40px;
+      bottom: -20px;
+    }
   }
 </style>
 
@@ -71,8 +78,8 @@
         a oferir un servei de màxima competència, adaptat a les realitats canviants de les persones.
       </p>
       <p>
-        Ens mou la visió d’una psicologia oberta, propera i lluminosa, on la confidencialitat i la seguretat del pacient conviuen amb la
-        possibilitat de connectar amb el món exterior.
+        <span style="font-weight: bolder;">Ens mou la visió d’una psicologia oberta, propera i lluminosa,</span> on la confidencialitat i la
+        seguretat del pacient conviuen amb la possibilitat de connectar amb el món exterior.
       </p>
     </div>
     <div class="circle" />
@@ -83,5 +90,5 @@
       <span>DEMANA CITA</span>
     </Button>
   </a>
-  <Svg name="" />
+  <img class="arrow" src="/assets/arrow.svg" alt="arrrow" />
 </section>

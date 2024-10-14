@@ -80,6 +80,12 @@
             font-weight: bolder;
           }
         }
+
+        .logo {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+        }
       }
 
       @include notDesktop {
@@ -88,6 +94,10 @@
         .form,
         .info {
           width: 100%;
+
+          .logo {
+            justify-content: center;
+          }
         }
       }
     }
@@ -136,9 +146,11 @@
     </form>
 
     <div class="info">
-      <Svg name="logo2" width="150" height="80" />
+      <div class="logo">
+        <Svg name="logo2" width="150" height="80" />
+      </div>
 
-      <div class="info-text"><span>Direcció:</span> Carrer de l'Átlantida, 21, planta 2 08230 Sant Adrià del Besòs.</div>
+      <div class="info-text"><span>Direcció:</span> Carrer de l'Átlantida, 21, planta 2 08930 Sant Adrià del Besòs.</div>
 
       <div class="socials">
         <div class="info-text"><span>Teléfon:</span> 931 418 524</div>

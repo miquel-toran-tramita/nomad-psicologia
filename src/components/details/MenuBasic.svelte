@@ -122,7 +122,7 @@
           font-size: 20px;
 
           background-color: rgba(43, 54, 41, 0.9);
-          backdrop-filter: blur(5px);
+          backdrop-filter: blur(8px);
 
           &.open {
             display: flex;
@@ -132,7 +132,7 @@
             transform: rotate(45deg);
             position: absolute;
 
-            top: 20px;
+            top: 10px;
             right: 40px;
           }
 

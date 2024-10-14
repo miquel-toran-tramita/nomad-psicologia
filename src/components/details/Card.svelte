@@ -38,7 +38,7 @@
       position: absolute;
       height: 100%;
       width: 100%;
-      background-color: rgba(43, 54, 41, 0.65);
+      background-color: rgba(43, 54, 41, 0.8);
       top: 0;
       backdrop-filter: blur(5px);
 
