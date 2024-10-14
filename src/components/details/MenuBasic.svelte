@@ -165,7 +165,7 @@
     <div class="items">
       {#each items as item, i}
         <div class="item-group">
-          <a class="item" href="#section{i}" class:cita={i === 2}>{item.title}</a>
+          <a class="item" href="#{item.title}" class:cita={i === 2}>{item.title}</a>
 
           {#if item.dropdown}
             <div class="dropdown">
@@ -189,8 +189,8 @@
         <Svg name="plus" height="40" width="40" fill="white" className="close" />
       </button>
 
-      {#each items as item, i}
-        <a class="item" href="#section{i}" title={item.title} on:click={openMenu}>{item.title}</a>
+      {#each items as item}
+        <a class="item" href="#{item.title}" title={item.title} on:click={openMenu}>{item.title}</a>
 
         {#if item.dropdown}
           {#each item.dropdown as subItem}

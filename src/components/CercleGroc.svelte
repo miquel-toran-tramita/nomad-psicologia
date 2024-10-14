@@ -77,8 +77,11 @@
     </div>
     <div class="circle" />
   </div>
-  <Button type="secondary">
-    <span>DEMANA CITA</span>
-  </Button>
+
+  <a href="#Demana Cita">
+    <Button type="secondary">
+      <span>DEMANA CITA</span>
+    </Button>
+  </a>
   <Svg name="" />
 </section>
