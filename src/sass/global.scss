@@ -6,12 +6,7 @@
   font-size: 28px;
   padding: 30px 0;
   color: var(--colorText);
-
   text-align: center;
-
-  @include notDesktop {
-    font-size: 30px;
-  }
 }
 
 .g-subtitle {
