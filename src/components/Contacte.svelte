@@ -28,7 +28,7 @@
             border: 1px solid #bebebe;
             border-radius: 5px;
             padding: 10px;
-            font-size: 16px;
+            font-size: 17px;
             outline: none;
           }
 
@@ -73,7 +73,7 @@
 
         .info-text {
           max-width: 325px;
-          font-size: 15px;
+          font-size: 17px;
 
           span {
             font-weight: bolder;

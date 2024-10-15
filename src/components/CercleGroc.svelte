@@ -25,7 +25,14 @@
       text-align: center;
       width: 100%;
       max-width: 700px;
-      padding: 50px 20px;
+
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      @include notDesktop {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
 
       .text {
         top: 0;
@@ -47,8 +54,10 @@
           padding: 0;
         }
 
-        @include notDesktop {
-          p {
+        p {
+          font-size: 17px;
+
+          @include notDesktop {
             font-size: 15px;
           }
         }
@@ -61,6 +70,8 @@
         aspect-ratio: 1 / 1;
         border-radius: 100%;
         top: 0;
+        bottom: 0;
+        margin: auto;
         z-index: 0;
 
         background-color: #ffbb00;

@@ -144,10 +144,6 @@
 
       @include notDesktop {
         grid-template-columns: repeat(1, 1fr);
-
-        .info {
-          font-size: 15px;
-        }
       }
     }
   }
