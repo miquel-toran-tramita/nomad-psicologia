@@ -108,7 +108,7 @@
   <div class="content">
     <form class="form" action="https://api.web3forms.com/submit" method="POST">
       <!-- Replace with your Access Key -->
-      <input type="hidden" name="access_key" value="8ea05408-206c-4f8d-aeca-059327af5113" />
+      <input type="hidden" name="access_key" value="155c3305-6d49-4f5e-a22b-71d5891a8c96" />
 
       <!-- Form Inputs. Each input must have a name="" attribute -->
       <div class="input-group">
