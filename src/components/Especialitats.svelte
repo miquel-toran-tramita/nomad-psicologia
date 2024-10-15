@@ -78,12 +78,6 @@
       flex-direction: column;
       width: 100%;
 
-      @include notDesktop {
-        :global(svg) {
-          display: none;
-        }
-      }
-
       .especialitat {
         border-bottom: 1px solid;
 
@@ -92,6 +86,11 @@
         padding: 35px 0;
         overflow: hidden;
         transition: 0.3s ease;
+        gap: 15px;
+
+        :global(svg) {
+          flex-shrink: 0;
+        }
 
         .details {
           max-width: 750px;
@@ -100,9 +99,15 @@
           flex-direction: column;
           gap: 30px;
 
-          .title {
-            font-size: 20px;
-            font-weight: bold;
+          .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .title {
+              font-size: 18px;
+              font-weight: bold;
+            }
           }
 
           .description {
@@ -145,12 +150,13 @@
     {#each especialitats as especialitat, i}
       <button class="especialitat" on:click={() => openClick(i)} class:open={openIndex === i} class:top={i === 0}>
         <div class="details">
-          <span class="title">{especialitat.title}</span>
+          <div class="header">
+            <span class="title">{especialitat.title}</span>
+            <Svg name="plus" className="svg-plus" />
+            <Svg name="minus" className="svg-minus" />
+          </div>
           <p class="description">{especialitat.description}</p>
         </div>
-
-        <Svg name="plus" className="svg-plus" />
-        <Svg name="minus" className="svg-minus" />
       </button>
     {/each}
   </div>

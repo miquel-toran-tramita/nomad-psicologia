@@ -120,7 +120,7 @@
       max-width: 875px;
       width: 100%;
 
-      h1 {
+      h2 {
         max-width: 600px;
         width: 100%;
       }
