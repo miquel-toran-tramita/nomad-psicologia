@@ -43,11 +43,11 @@
         max-width: 775px;
         width: 100%;
 
-        @include notDesktop {
-          h1 {
-            font-size: 25px;
-          }
+        .title {
+          padding: 0;
+        }
 
+        @include notDesktop {
           p {
             font-size: 15px;
           }
@@ -83,7 +83,7 @@
 <section class="cercle-content" {id}>
   <div class="content g-wrapper">
     <div class="text">
-      <h1>A NOMAD PSICOLOGIA creiem en una psicologia més enllà dels límits tradicionals.</h1>
+      <h2 class="g-title title">A NOMAD PSICOLOGIA creiem en una psicologia més enllà dels límits tradicionals.</h2>
       <p>
         Som un equip de professionals apassionat, amb més de 15 anys d’experiència i un profund arrelament al nostre territori, compromesos
         a oferir un servei de màxima competència, adaptat a les realitats canviants de les persones.

@@ -3,9 +3,13 @@
 @import 'mixins.scss';
 
 .g-title {
-  font-size: 28px;
   padding: 30px 0;
   color: var(--colorText);
+
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+
   text-align: center;
 }
 

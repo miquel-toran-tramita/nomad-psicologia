@@ -129,12 +129,13 @@
     .cards {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 75px;
+      gap: 50px;
 
       .info {
         display: flex;
         flex-direction: column;
         font-size: 13px;
+        margin-bottom: 25px;
 
         .name {
           font-weight: bolder;
@@ -154,14 +155,14 @@
 
 <section class="equip-container" {id}>
   <div class="title g-wrapper">
-    <h1>Transformem la psicologia perquè puguis transformar la teva vida.</h1>
+    <h2 class="g-title">Transformem la psicologia perquè puguis transformar la teva vida.</h2>
     <p>
       La diversitat del nostre equip multidisciplinari és la nostra major fortalesa. Junts, treballem en sinergia per oferir-te el suport
       que millor s’adapti a les teves necessitats, acompanyant-te en el teu camí cap al benestar amb professionalitat, empatia i compromís.
     </p>
   </div>
 
-  <div class="cards g-wrapper">
+  <div class="cards">
     {#each team as member}
       <Card photo={member.photo} more={member.description}>
         <div class="info">

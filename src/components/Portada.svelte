@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Svg from './details/Svg.svelte'
 </script>
 
 <style lang="scss">
