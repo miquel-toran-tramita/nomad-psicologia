@@ -12,9 +12,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 75px 50px;
     gap: 50px;
     background-color: var(--colorBrandSofter);
+    padding: 50px 0;
 
     .content {
       position: relative;
@@ -24,9 +24,10 @@
       flex-direction: column;
       text-align: center;
       width: 100%;
+      max-width: 700px;
+      padding: 50px 20px;
 
       .text {
-        position: absolute;
         top: 0;
         bottom: 0;
         right: 0;
@@ -37,6 +38,7 @@
         flex-direction: column;
         justify-content: center;
         gap: 25px;
+        z-index: 1;
 
         max-width: 775px;
         width: 100%;
@@ -53,24 +55,33 @@
       }
 
       .circle {
-        height: 350px;
-        width: 350px;
+        position: absolute;
+        height: 100%;
+        max-height: 350px;
+        aspect-ratio: 1 / 1;
         border-radius: 100%;
+        top: 0;
+        z-index: 0;
 
         background-color: #ffbb00;
       }
+    }
+
+    a {
+      z-index: 2;
     }
 
     .arrow {
       position: absolute;
       height: 40px;
       bottom: -20px;
+      z-index: 2;
     }
   }
 </style>
 
 <section class="cercle-content" {id}>
-  <div class="content">
+  <div class="content g-wrapper">
     <div class="text">
       <h2 class="g-title title">A NOMAD PSICOLOGIA creiem en una psicologia més enllà dels límits tradicionals.</h2>
       <p>

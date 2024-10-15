@@ -7,14 +7,10 @@
   color: var(--colorText);
 
   margin: 0;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
 
   text-align: center;
-
-  @include notDesktop {
-    font-size: 30px;
-  }
 }
 
 .g-subtitle {
