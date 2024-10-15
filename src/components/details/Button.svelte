@@ -24,6 +24,7 @@
       color: white;
       font-weight: bold;
       transition: 0.3s ease;
+      font-size: 17px;
     }
 
     &:not([disabled]):hover {

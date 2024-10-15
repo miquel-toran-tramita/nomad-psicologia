@@ -87,7 +87,7 @@
     padding-bottom: 20px;
 
     input {
-      font-size: 16px;
+      font-size: 17px;
       width: 100%;
       outline: none;
       z-index: 1;
@@ -104,7 +104,7 @@
     textarea {
       width: 100%;
       outline: none;
-      font-size: 16px;
+      font-size: 17px;
       z-index: 1;
     }
 

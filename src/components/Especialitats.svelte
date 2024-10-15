@@ -82,7 +82,6 @@
         border-bottom: 1px solid;
 
         display: flex;
-        justify-content: space-between;
         padding: 35px 0;
         overflow: hidden;
         transition: 0.3s ease;
@@ -93,7 +92,7 @@
         }
 
         .details {
-          max-width: 750px;
+          width: 100%;
           text-align: start;
           display: flex;
           flex-direction: column;
@@ -103,6 +102,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
 
             .title {
               font-size: 18px;
@@ -112,6 +112,8 @@
 
           .description {
             display: none;
+            max-width: 750px;
+            width: 100%;
           }
         }
 
