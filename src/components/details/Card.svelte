@@ -3,9 +3,13 @@
 
   export let photo: string
   export let more: string
+
+  let flipped: boolean = false
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
+
   .card {
     position: relative;
     padding: 20px;
@@ -47,7 +51,7 @@
       gap: 10px;
 
       padding: 15px;
-      font-size: 11px;
+      font-size: 13px;
       text-align: start;
       font-weight: lighter;
       color: white;
@@ -56,24 +60,32 @@
       transition: 0.3s ease;
     }
 
-    &:hover {
-      .back {
-        transition: 0.3s ease;
+    @include desktop {
+      &:hover {
+        .back {
+          transition: 0.3s ease;
+          opacity: 1;
+        }
+      }
+    }
+
+    @include notDesktop {
+      .flipped {
         opacity: 1;
       }
     }
   }
 </style>
 
-<div class="card">
+<button class="card" on:click={() => (flipped = !flipped)}>
   <Svg name="plus" height="18" width="18" className="plus" />
 
   <img class="photo" src="/assets/equip/{photo}.JPG" alt="foto" />
 
   <slot />
 
-  <div class="back">
+  <div class="back" class:flipped>
     <Svg name="minus" height="18" width="18" fill="white" />
     {@html more}
   </div>
-</div>
+</button>

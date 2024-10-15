@@ -139,7 +139,7 @@
 </style>
 
 <section class="especialitats-container" {id}>
-  <h1>Especialitats</h1>
+  <h2 class="g-title">Especialitats</h2>
 
   <div class="especialitats g-wrapper">
     {#each especialitats as especialitat, i}
