@@ -26,14 +26,41 @@ const title = props.title
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <title>{title}</title>
-  </head>
+    <style lang="scss">
+      footer {
+        height: 50px;
+        margin-top: 50px;
+        background-color: var(--colorBrand);
+
+        .g-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          height: 50px;
+        }
+
+        a {
+          color: white;
+          font-size: 14px;
+        }
+      }
+    </style></head
+  >
+
   <body>
     <MenuBasic client:load />
 
     <slot />
 
-    <style lang="scss" is:global>
-      @import '@/sass/global.scss';
-    </style>
+    <footer>
+      <div class="g-wrapper">
+        <a href="/avis-legal"> Avís legal </a>
+        <a href="/politica-de-privacitat"> Política de privacitat </a>
+      </div>
+    </footer>
   </body>
+
+  <style lang="scss" is:global>
+    @import '@/sass/global.scss';
+  </style>
 </html>

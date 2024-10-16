@@ -9,15 +9,19 @@
 
   const items: IMenuItem[] = [
     {
-      href: '/',
+      href: 'Equip',
       title: 'Equip',
     },
     {
-      href: '/',
+      href: 'Especialitats',
       title: 'Especialitats',
     },
     {
-      href: '/',
+      href: 'DemanaCita',
+      title: 'Contacte',
+    },
+    {
+      href: 'DemanaCita',
       title: 'Demana Cita',
     },
   ]
@@ -165,7 +169,7 @@
     <div class="items">
       {#each items as item, i}
         <div class="item-group">
-          <a class="item" href="https://nomadpsicologia.com/#{item.title}" class:cita={i === 2}>{item.title}</a>
+          <a class="item" href="https://nomadpsicologia.com/#{item.href}" class:cita={i === 3}>{item.title}</a>
 
           {#if item.dropdown}
             <div class="dropdown">

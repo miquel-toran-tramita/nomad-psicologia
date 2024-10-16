@@ -139,7 +139,7 @@
       <!-- Honeypot Spam Protection -->
       <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
-      <input type="hidden" name="redirect" value="https://nomadpsicologia.com" />
+      <input type="hidden" name="redirect" value="https://nomadpsicologia.com/gracies" />
 
       <button type="submit" class="g-btn">ENVIAR</button>
     </form>
