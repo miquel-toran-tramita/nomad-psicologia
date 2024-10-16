@@ -107,7 +107,7 @@
     <div class="circle" />
   </div>
 
-  <a href="#Demana Cita">
+  <a href="#DemanaCita">
     <Button type="secondary">
       <span>DEMANA CITA</span>
     </Button>
