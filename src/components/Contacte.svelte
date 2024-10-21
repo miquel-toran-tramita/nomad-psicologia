@@ -152,8 +152,8 @@
       <div class="info-text"><span>Direcció:</span> Carrer de l'Átlantida, 21, planta 2 08930 Sant Adrià del Besòs.</div>
 
       <div class="socials">
-        <div class="info-text"><span>Teléfon:</span> 931 418 524</div>
-        <div class="info-text"><span>WhatsApp:</span> 640 293 991</div>
+        <div class="info-text"><span>Teléfon:</span> <a href="tel:+34931418524">931 418 524</a></div>
+        <div class="info-text"><span>WhatsApp:</span> <a href="https://wa.me/+34640293991">640 293 991</a></div>
         <div class="info-text"><span>E-mail:</span> nomad@nomadpsicologia.com</div>
       </div>
 
