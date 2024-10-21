@@ -194,7 +194,7 @@
       </button>
 
       {#each items as item}
-        <a class="item" href="#{item.title}" title={item.title} on:click={openMenu}>{item.title}</a>
+        <a class="item" href="https://nomadpsicologia.com/#{item.href}" title={item.title} on:click={openMenu}>{item.title}</a>
 
         {#if item.dropdown}
           {#each item.dropdown as subItem}
