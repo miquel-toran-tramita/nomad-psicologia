@@ -98,6 +98,15 @@
       description:
         'M’he format dins el camp de la psicologia relacional i constructivista realitzant el Màster en Teràpia Cognitivo-social de la Universitat de Barcelona i  en  el camp de la psicoteràpia sistèmica, ja que considero que  aquestes orientacions em proporcionen eines per poder intervenir de forma integral tant a nivell individual com familiar i grupal.',
     },
+    {
+      photo: 'Jordi',
+      name: 'Jordi Rios Guerrero.',
+      title: 'Psicòleg i psicopedagogo.',
+      num: 'Col·legiat 30.555',
+      role: '',
+      description:
+        'La meva tasca professional és ajudar a les persones, especialment nens i adolescents, a superar dificultats d’aprenentatge i a desenvolupar habilitats cognitives, emocionals i socials, no només millorant el rendiment acadèmic sinó promovent un desenvolupament integral: identificant les dificultats, realitzant una intervenció personalitzada i col·laborant amb la família i l’escola.<br/><br/> M’he format com a mestre de primària, llicenciat en psicopedagogia i graduat en psicologia amb un màster en intervenció psicològica infanto-juvenil des de la teràpia humanista, psicodinàmica, cognitiu-conductual, sistèmica i integradora.',
+    },
   ]
 </script>
 
