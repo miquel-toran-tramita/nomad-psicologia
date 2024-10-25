@@ -117,7 +117,7 @@
       </div>
 
       <div class="input-group">
-        <label for="">Email</label>
+        <label for="">Correu electrònic</label>
         <input type="text" name="Email" required />
       </div>
 
@@ -127,13 +127,13 @@
       </div>
 
       <div class="input-group">
-        <label for="">Deixa el teu comentario</label>
+        <label for="">Deixa el teu comentari</label>
         <textarea name="Missatge"></textarea>
       </div>
 
       <div class="input-group radio">
         <input type="checkbox" required />
-        <label for="">He llegit i acepto la <a href="/politica-de-privacitat">Política de privacitat</a></label>
+        <label for="">He llegit i accepto la <a href="/politica-de-privacitat">Política de privacitat</a></label>
       </div>
 
       <!-- Honeypot Spam Protection -->
@@ -154,7 +154,7 @@
       <div class="socials">
         <div class="info-text"><span>Telèfon:</span> <a href="tel:+34931418524">931 418 524</a></div>
         <div class="info-text"><span>WhatsApp:</span> <a href="https://wa.me/+34640293991">640 293 991</a></div>
-        <div class="info-text"><span>E-mail:</span> nomad@nomadpsicologia.com</div>
+        <div class="info-text">nomad@nomadpsicologia.com</div>
       </div>
 
       <div class="info-text">
