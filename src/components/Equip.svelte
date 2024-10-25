@@ -101,7 +101,7 @@
     {
       photo: 'Jordi',
       name: 'Jordi Rios Guerrero.',
-      title: 'Psicòleg i psicopedagogo.',
+      title: 'Psicòleg i Psicopedagog.',
       num: 'Col·legiat 30.555',
       role: '',
       description:
